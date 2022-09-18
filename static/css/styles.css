@@ -1,0 +1,197 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(to right top, #11233c, #43728e, #334686, #1a0e0b, #465132);
+    width: 100%;
+}
+
+.container{
+    margin: 140px auto;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px;
+    background:rgb(28, 1, 37);
+}
+
+header{
+    font-size: 25px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+}
+
+.input-area{
+    width: 86%;
+    height: 50px;
+    text-align: right;
+}
+.input-area button{
+    width: 40px;
+    height: 70%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #7237bf;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 18px;
+    padding: 0px 7px;
+    cursor: pointer;
+    position: relative;
+    top: 3px;
+}
+
+.input-area button:hover{
+    background-color:  #340671;
+}
+
+.list{
+    
+    width: 100%;
+}
+
+.list li{
+    list-style-type: none;
+    height: 100px;
+    width: 85%;
+    line-height: 45px;
+    position: relative;
+    margin-bottom: 10px;
+    background-color: rgb(134, 87, 81);
+    border-radius: 3px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+}
+
+.list li span{
+    position: absolute;
+    right: -80px;
+    color: white;
+    width: 80px;
+    height: 100px;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    border-radius: 0 3px 3px 0;
+}
+
+.list li:hover span{
+    right: 0px;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.list .fa-trash{
+    position: relative;
+    top: 30px;
+    left: 16px;
+    color: rgb(247, 12, 12) !important;
+}
+
+.list .fa-trash:hover{
+    color: rgb(181, 101, 101) !important;
+    transition: all .1s ease-in;
+    font-size: 18px;
+}
+
+.list .fa-pen{
+    position: relative;
+    top: 30px;
+    right: 10px;
+    color: rgb(7, 192, 109) !important;
+}
+
+.list .fa-pen:hover{
+    color: white !important;
+    transition: all .1s ease-in;
+    font-size: 18px;
+}
+
+.messages{
+    color: gold;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: left;
+}
+
+.task{
+    color: black;
+    font-weight: 100 !important;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+}
+
+.description{
+    color: rgb(189, 255, 189);
+    display: block;
+    font-weight: 100 !important;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* UPDATE */
+
+
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.footer button{
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #5905c7;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 17px;
+    padding: 9px 10px;
+    cursor: pointer;
+    position: relative;
+    left: -83px;
+}
+
+.footer button:hover{
+    background-color:  #340671;
+}
+
+.footer span{
+    color: gold;
+    position: relative;
+    left: 27px;
+}
+
+/* LOGIN FORM */
+
+.form-container{
+    margin: 140px auto;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form-text{
+    color: white;
+    font-size: 18px;
+}
+
+.form-placeholder{
+    font-size: 17px;
+}
+
+

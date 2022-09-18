@@ -1,0 +1,44 @@
+    {% extends 'folder/base.html' %}
+    {% load static %}
+
+    {% block content %}
+    <div class="container">
+        <header>ToDo List</header>
+        <div class="input-area">
+        <button type="submit"><i class="fas fa-plus"></i></button>
+        </div>
+        <ul class="list">
+            <li>
+                <strong class="task">Task:</strong>
+                <span>
+                    <a href="#"><i class="fas fa-pen"></i></a>
+                    
+                    <a href="#"><i class="fas fa-trash"></i></a>
+                </span>
+                <p class="description">
+                    <strong>Description:</strong>
+                </p>
+            </li>
+        </ul>
+        <div class="footer">
+            <span>3 task uncompleted</span>
+            <button>Clear all</button>
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <!-- <div class="footer">
+            
+        {% if tasks > 0 %}
+        <span>{{tasks}} task uncompleted</span>
+        <button>Clear all</button>x
+        {% else %}
+        <span>No task</span>
+            
+        {% endif %}
+            
+    </div>
+     -->
+
+
