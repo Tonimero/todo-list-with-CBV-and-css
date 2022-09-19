@@ -1,0 +1,24 @@
+{% extends 'folder/base.html' %}
+{% load static %}
+{% block update %}
+    <div class="container1">
+        <a href="{% url 'index' %}" class="href">Go back</a>
+        <header style="color: black;">Update Task</header>
+        <ul class="list">
+            <form method="post" class="form-control">
+                {% csrf_token %}
+                {{form.as_p}}
+                <button type="submit" class="btn1">Update</button>
+            </form> 
+
+
+            <script>
+                let inputfield = document.getElementById('id_title')
+                let bodyField = document.getElementById('id_description')
+                
+                bodyField.classList.add('form-control')
+                inputfield.classList.add('form-control')
+                
+            </script>
+
+{% endblock %}

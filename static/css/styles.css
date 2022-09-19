@@ -162,7 +162,7 @@ header{
     padding: 9px 10px;
     cursor: pointer;
     position: relative;
-    left: -83px;
+    left: -72px;
 }
 
 .footer button:hover{
@@ -173,6 +173,70 @@ header{
     color: gold;
     position: relative;
     left: 27px;
+}
+
+
+
+
+/* update */
+
+.container1{
+    margin: 140px auto;
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px;
+    background: rgb(218, 201, 224);
+}
+
+.form-control{
+    background:rgb(218, 201, 224) !important; 
+    border: 2px solid rgb(131, 88, 175);
+}
+
+.btn1{
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #5905c7;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 17px;
+    padding: 9px 10px;
+    cursor: pointer;
+}
+
+.btn1:hover{
+    background-color:  #340671;
+}
+
+
+/* Delete */
+.btn2{
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: #a01515;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 17px;
+    padding: 9px 10px;
+    cursor: pointer;
+}
+
+.btn2:hover{
+    background-color:  #e60000;
+}
+
+.href{
+    text-decoration: none;
+    background: #340671;
+    border-radius: 3px;
+    margin-left: 5px;
+    font-size: 12px;
+    padding: 9px 10px;
+    cursor: pointer;
+    color: white;
 }
 
 /* LOGIN FORM */

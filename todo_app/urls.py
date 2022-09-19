@@ -1,7 +1,13 @@
 from django.urls import path
 
-from todo_app.views import TaskList
+from .views import *
 
 urlpatterns = [
-    path('', TaskList.as_view(), name='index')
+    
+    path('delete/<int:pk>/', TaskDelete.as_view(), name='delete'),
+    path('update/<int:pk>/', TaskUpdate.as_view(), name='update'),
+    path('create/', TaskCreate.as_view(), name='create'),
+    path('', TaskList.as_view(), name='index'),
+    
+    
 ]

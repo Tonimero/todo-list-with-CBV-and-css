@@ -5,21 +5,23 @@
     <div class="container">
         <header>ToDo List</header>
         <div class="input-area">
-        <button type="submit"><i class="fas fa-plus"></i></button>
+        <a href="{% url 'create' %}"><button><i class="fas fa-plus"></i></button></a>
         </div>
+        {% for c in task %}
         <ul class="list">
             <li>
-                <strong class="task">Task:</strong>
+                <strong class="task">Task: {{ c.title }}</strong>
                 <span>
-                    <a href="#"><i class="fas fa-pen"></i></a>
+                    <a href="{% url 'update' c.id %}"><i class="fas fa-pen"></i></a>
                     
-                    <a href="#"><i class="fas fa-trash"></i></a>
+                    <a href="{% url 'delete' c.id %}"><i class="fas fa-trash"></i></a>
                 </span>
                 <p class="description">
-                    <strong>Description:</strong>
+                    <strong>Description: {{c.description}}</strong>
                 </p>
             </li>
         </ul>
+        {% endfor %}
         <div class="footer">
             <span>3 task uncompleted</span>
             <button>Clear all</button>
