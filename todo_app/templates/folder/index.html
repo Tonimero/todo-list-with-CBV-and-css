@@ -2,7 +2,15 @@
     {% load static %}
 
     {% block content %}
+
+
+
     <div class="container">
+            {% if request.user.is_authenticated %}
+                <h5 style="color: white; margin-top: auto; position:absolute; top: 170px; font-size:17px"> Welcome, {{request.user}}</h5>
+                <p style="text-align:right;"><a href="{% url 'logout' %}" class="href">Logout</a></p>
+            {% endif %}
+
         <header>ToDo List</header>
         <div class="input-area">
         <a href="{% url 'create' %}"><button><i class="fas fa-plus"></i></button></a>

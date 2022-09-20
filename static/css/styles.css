@@ -231,13 +231,24 @@ header{
 .href{
     text-decoration: none;
     background: #340671;
-    border-radius: 3px;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-size: 14px;
+    padding: 9px 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-login{
+    background: #340671;
+    border-radius: 10px;
     margin-left: 5px;
     font-size: 12px;
     padding: 9px 10px;
     cursor: pointer;
     color: white;
 }
+
 
 /* LOGIN FORM */
 

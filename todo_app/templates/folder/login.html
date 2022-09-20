@@ -1,0 +1,13 @@
+{% extends 'folder/base.html' %}
+{% load static %}
+{% block login %}
+<div class="container"style="color:aliceblue;">
+<h1 style="color:aliceblue; text-align:center;">Login</h1>
+
+<form method="Post" style="padding: 39px 90px; text-align:center;">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="btn btn-login"> Login</button>
+</form>
+</div>
+{% endblock %}
