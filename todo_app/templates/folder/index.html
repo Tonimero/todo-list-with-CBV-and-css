@@ -12,15 +12,18 @@
             <li>
                 <strong class="task">Task: {{ c.title }}</strong>
                 <span>
-                    <a href="{% url 'update' c.id %}"><i class="fas fa-pen"></i></a>
+                    <a href="{{ c.get_absolute_url }}"><i class="fas fa-pen"></i></a>
                     
-                    <a href="{% url 'delete' c.id %}"><i class="fas fa-trash"></i></a>
+                    <a href="{{ c.get_absolute_urls }}"><i class="fas fa-trash"></i></a>
                 </span>
                 <p class="description">
                     <strong>Description: {{c.description}}</strong>
                 </p>
             </li>
         </ul>
+            {% empty %}
+            <h6 style="color:aliceblue; text-align:center;">No task added</h6>
+
         {% endfor %}
         <div class="footer">
             <span>3 task uncompleted</span>

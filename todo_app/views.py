@@ -18,16 +18,17 @@ class TaskList(ListView):
 class TaskCreate(CreateView):
     model = Task
     template_name = 'folder/create.html'
-    fields = '__all__'
+    fields = ['title', 'description']
     context_object_name = 'task'
     success_url = reverse_lazy('index') 
 
 class TaskUpdate(UpdateView):
     model = Task
     template_name = 'folder/update.html'
-    fields = '__all__'
+    fields = ['title', 'description']
     context_object_name = 'tasks'
     success_url = reverse_lazy('index') 
+    
 
 class TaskDelete(DeleteView):
     model = Task
