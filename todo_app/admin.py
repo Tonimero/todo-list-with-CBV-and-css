@@ -7,3 +7,5 @@ class TaskSlug(admin.ModelAdmin):
     prepopulated_fields = {'slug':('title',)}
 
 admin.site.register(Task, TaskSlug)
+
+admin.site.register(Profile)

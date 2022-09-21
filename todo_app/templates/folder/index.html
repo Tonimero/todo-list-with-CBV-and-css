@@ -7,35 +7,54 @@
 
     <div class="container">
             {% if request.user.is_authenticated %}
-                <h5 style="color: white; margin-top: auto; position:absolute; top: 170px; font-size:17px"> Welcome, {{request.user}}</h5>
-                <p style="text-align:right;"><a href="{% url 'logout' %}" class="href">Logout</a></p>
+                <h5 style="color: rgb(255, 255, 255); margin-top: auto; position:absolute; top: 170px; font-size:17px; font-family: 'Kalam', cursive;"> Welcome, {{request.user|title}}</h5>
+                <p style="text-align:right; font-family: 'Kalam', cursive;"><a href="{% url 'logout' %}" class="href">Logout</a></p>
             {% endif %}
 
-        <header>ToDo List</header>
+        <header style="font-family: 'Kalam', cursive;">ToDo List</header>
         <div class="input-area">
-        <a href="{% url 'create' %}"><button><i class="fas fa-plus"></i></button></a>
+            <p style="text-align:right;"><a href="{% url 'create' %}"><button><i class="fas fa-plus"></i></button></a></p>
         </div>
         {% for c in task %}
         <ul class="list">
+            {% if c.completed %}
             <li>
-                <strong class="task">Task: {{ c.title }}</strong>
+                <div>
+                <div class="task-complete-icon"></div>
+                <strong style ="font-family: 'Kalam', cursive; color:bisque;"><i><s>Task: {{ c.title }}</s></i></strong>
                 <span>
                     <a href="{{ c.get_absolute_url }}"><i class="fas fa-pen"></i></a>
                     
                     <a href="{{ c.get_absolute_urls }}"><i class="fas fa-trash"></i></a>
                 </span>
                 <p class="description">
-                    <strong>Description: {{c.description}}</strong>
+                    <strong style ="font-family: 'Kalam', cursive;"><i><s>Description: {{ c.description }}</s></i></strong>
+                </p>
+                </div>
+            </li>
+            {% else %}
+
+            <li>
+                <strong style ="font-family: 'Roboto Condensed', sans-serif;">Task: {{ c.title }}</strong>
+                <span>
+                    <a href="{{ c.get_absolute_url }}"><i class="fas fa-pen"></i></a>
+                    
+                    <a href="{{ c.get_absolute_urls }}"><i class="fas fa-trash"></i></a>
+                </span>
+                <p class="description">
+                    <strong style ="font-family: 'Roboto Condensed', sans-serif;">Description: {{ c.description }}</strong>
                 </p>
             </li>
+
+            {% endif %}
         </ul>
             {% empty %}
             <h6 style="color:aliceblue; text-align:center;">No task added</h6>
 
         {% endfor %}
         <div class="footer">
-            <span>3 task uncompleted</span>
-            <button>Clear all</button>
+            <span style="text-align: center;"><i>{{count}}</i> task{{count|pluralize:"s"}} uncompleted</span>
+            <!-- <button>Clear all</button> -->
         </div>
     </div>
 

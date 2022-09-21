@@ -7,7 +7,7 @@ from django.urls import reverse
 class Task(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     title = models.CharField(max_length=200)
-    slug = models.SlugField(null=False, unique=True)
+    slug = models.SlugField(null=False)
     description = models.CharField(max_length=200)
     completed = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -34,5 +34,12 @@ class Task(models.Model):
     class Meta:
         ordering = ['-created_at']
         
-
+class Profile(models.Model):
+    first_name = models.CharField(max_length=200)
+    last_name = models.CharField(max_length=200)
+    username = models.CharField(max_length=200)
+    email = models.EmailField(unique=True)
+    password = models.CharField(max_length=200)
+    profile_picture = models.FileField(upload_to="static/images/profile_picture/", blank=True, null=True)
+    date_created = models.DateTimeField(auto_now_add=True)
 

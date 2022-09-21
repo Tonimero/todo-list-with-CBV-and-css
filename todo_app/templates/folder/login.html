@@ -2,12 +2,32 @@
 {% load static %}
 {% block login %}
 <div class="container"style="color:aliceblue;">
-<h1 style="color:aliceblue; text-align:center;">Login</h1>
+    {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %} class="message">{{ message }}</li>
+            {% endfor %}
+            </ul>
+    {% endif %}
+<h1 style="color:aliceblue; text-align:center; margin-bottom: 10px;">Login</h1>
 
-<form method="Post" style="padding: 39px 90px; text-align:center;">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit" class="btn btn-login"> Login</button>
-</form>
+    <form method="Post">
+        {% csrf_token %}
+        <div class="form-group">
+            <!-- <label for="username">Email address</label> -->
+            <input type="text" class="form-con" name="username" placeholder="Enter Username">
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <br>
+        <div class="form-group">
+            <!-- <label for="exampleInputPassword1">Password</label> -->
+            <input type="password" class="form-con" name="password" placeholder="Password">
+        </div>
+        <br>
+        <button type="submit" class="btn btn-login">Login</button>
+    </form>
+    <br>
+    <p>Dont have an account? <a href="{% url 'register' %}">Register</a></p>
+
 </div>
 {% endblock %}

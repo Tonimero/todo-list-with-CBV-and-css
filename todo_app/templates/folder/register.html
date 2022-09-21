@@ -1,0 +1,54 @@
+{% extends 'folder/base.html' %}
+{% load static %}
+{% block login %}
+<div class="container"style="color:aliceblue;">
+    {% if messages %}
+            <ul class="messages">
+            {% for message in messages %}
+                <li {% if message.tags %} class="{{ message.tags }}"{% endif %} class="message">{{ message }}</li>
+            {% endfor %}
+            </ul>
+    {% endif %}
+<h1 style="color:aliceblue; text-align:center; margin-bottom: 10px;">Register</h1>
+
+    <form method="Post">
+        {% csrf_token %}
+        <div class="form-group">
+            <!-- <label for="username">Email address</label> -->
+            <input type="text" class="form-con" name="first_name" placeholder="First Name" required>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <br>
+        <div class="form-group">
+            <!-- <label for="username">Email address</label> -->
+            <input type="text" class="form-con" name="last_name" placeholder="Last Name" required>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <br>
+        <div class="form-group">
+            <!-- <label for="username">Email address</label> -->
+            <input type="email" class="form-con" name="email" placeholder="Email Address" required>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <br>
+        <div class="form-group">
+            <!-- <label for="username">Email address</label> -->
+            <input type="text" class="form-con" name="username" placeholder="Username" required>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <br>
+        <div class="form-group">
+            <!-- <label for="username">Email address</label> -->
+            <input type="password" class="form-con" name="password" placeholder="password" required>
+            <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <br>
+    
+        <button type="submit" class="btn btn-login">Register</button>
+    </form>
+    <br>
+
+    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+
+</div>
+{% endblock %}
