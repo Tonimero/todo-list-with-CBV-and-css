@@ -75,7 +75,7 @@ header{
     overflow: hidden;
     text-transform: capitalize;
 }
-
+ 
 .list li span{
     position: absolute;
     right: -80px;
